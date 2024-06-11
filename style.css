@@ -20,7 +20,7 @@ header {
   height: 10rem;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 .dark {
@@ -66,29 +66,39 @@ a:hover {
   transform: scale(1.2);
 }
 
-.data, ul {
+main .data, ul {
   align-items: center;
   display: flex;
   justify-content: space-around;
 }
 
-#data {
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+main {
   margin: 10rem auto 0;
   width: 65rem;
 }
-#data h1 {
+main h1 {
   font-size: 6rem;
   font-weight: 500;
 }
-#data .position {
+main .position {
   font-size: 3.4rem;
   font-weight: 100;
 }
-#data .myPhoto {
+main .myPhoto {
   border-radius: 50%;
   width: 28rem;
 }
-#data .resume {
+main .resume {
   font-size: 1.8rem;
   text-align: justify;
 }
@@ -134,24 +144,60 @@ form .submit {
   color: #f5f5f5;
 }
 
-@media only screen and (max-width: 650px) {
+.left {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 675px) {
   main {
-    width: 40rem;
+    width: 55rem;
   }
   .data {
     flex-direction: column;
   }
   h1 {
     font-size: 3.5rem;
+    text-align: center;
   }
   .position {
     font-size: 2rem;
+    text-align: center;
   }
   img {
     width: 25rem;
   }
   p {
     font-size: 1.4rem;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu {
+    display: none;
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+    background-color: #201e1e;
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu ul li {
+    margin: 1rem 0;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #dark-mode {
+    display: none;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -163,6 +209,9 @@ form .submit {
   }
   .img-port {
     width: 20rem;
+  }
+  .navbar a {
+    font-size: 1rem;
   }
 }
 

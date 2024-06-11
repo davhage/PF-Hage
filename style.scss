@@ -27,7 +27,7 @@ header {
     height: 10rem;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
 }
 
 .dark {
@@ -73,16 +73,25 @@ a:hover {
     transform: scale(1.2);
 }
 
-.data, ul {
+main .data, ul {
     align-items: center;
     display: flex;
     justify-content: space-around;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    margin-right: 2rem;
+}
 // Main
 // Data section
 
-#data {
+main {
     margin: 10rem auto 0;
     width: 65rem;
     h1 {
@@ -154,10 +163,19 @@ form {
     color: $light-color;
 }
 
+.left {
+    display: none;
+}
+
+.mobile {
+    display: none;
+} 
+
+
 // Media queries
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 675px){
     main {
-        width: 40rem;
+        width: 55rem;
     }
 
     .data {
@@ -166,10 +184,12 @@ form {
 
     h1{
         font-size: 3.5rem;
+        text-align: center;
     }
 
     .position {
         font-size: 2rem;
+        text-align: center;
     }
     img {
         width: 25rem;
@@ -177,6 +197,35 @@ form {
 
     p {
         font-size: 1.4rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    .menu {
+        display: none;
+        position: fixed;
+        top: 7rem;
+        left: 0;
+        width: 100%;
+        background-color: $dark-color;
+    }
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu ul li {
+        margin: 1rem 0;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+
+    #dark-mode {
+        display: none;
     }
 }
 
@@ -191,5 +240,9 @@ form {
 
     .img-port {
         width: 20rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
     }
 }
