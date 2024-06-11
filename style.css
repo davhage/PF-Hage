@@ -154,7 +154,7 @@ form .submit {
 
 @media only screen and (max-width: 675px) {
   main {
-    width: 55rem;
+    width: 40rem;
   }
   .data {
     flex-direction: column;
@@ -200,7 +200,7 @@ form .submit {
     display: none;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 550px) {
   main {
     width: 30rem;
   }
