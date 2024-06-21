@@ -37,10 +37,16 @@ header {
   width: 100%;
 }
 
+.div-logo {
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo {
   border-radius: 50%;
   height: 4rem;
-  margin-left: 3rem;
   width: 4rem;
 }
 
@@ -58,7 +64,6 @@ a {
   color: inherit;
   font-size: 1.6rem;
   text-decoration: none;
-  margin-right: 3rem;
 }
 
 a:hover {
@@ -111,9 +116,6 @@ main .resume {
   flex-wrap: wrap;
   height: 80rem;
   width: 100%;
-}
-#portfolio .img-port {
-  width: 40rem;
 }
 #portfolio .img-port:hover {
   transform: scale(1.1);
