@@ -14,12 +14,14 @@ body {
     color: $dark-color;
     font-family: "Montserrat", sans-serif;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body, main {
     display: flex;
     flex-direction: column;
+
 }
 
 // Navbar
@@ -27,7 +29,7 @@ header {
     height: 10rem;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .dark {
@@ -98,7 +100,9 @@ main .data, ul {
 
 main {
     margin: 10rem auto 0;
-    width: 65rem;
+    width: 90%;
+    max-width: 75rem;
+
     h1 {
         font-size: 6rem;
         font-weight: 500;
@@ -109,57 +113,55 @@ main {
     }
     .myPhoto {
         border-radius: 50%;
-        width: 28rem;
+        width: 100%;
+        max-width: 28rem;
     }
     .resume {
         font-size: 1.8rem;
         text-align: justify;
     }
-}
-
-// Portfolio
-
-#portfolio {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 80rem;
-    width: 100%;
     
-    // .img-port {
-    //     height: 10rem;
-    // }
+    // Portfolio
     
-    .img-port:hover {
-        transform: scale(1.1);
+    #portfolio {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        margin-top: 10rem;
+        
+        .img-port {
+            width: 100%;
+            max-width: 55rem;
+            margin-bottom: 3rem;
+        }
+        
+        .img-port:hover {
+            transform: scale(1.1);
+        }
     }
-}
-
-
-// Form
-
-form {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    
-    fieldset {
-       height: 45rem;
-       margin: auto;
-       width: 45rem;
-       display: flex;
-       flex-direction: column;
-       justify-content: space-evenly;
-   }
-   
-    .submit {
-       cursor: pointer;
-       margin-top: 1rem;
-       padding: .6rem;
-       height: 4rem;
-   }
+    // Form
+    #contact {
+        margin-top: 10rem;
+    }
+    form {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        
+        fieldset {
+           height: 100%;
+           margin: auto;
+           width: 60%;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+       }
+       
+    }
 }
 
 // Dark mode
@@ -180,7 +182,7 @@ form {
 // Media queries
 @media only screen and (max-width: 675px){
     main {
-        width: 40rem;
+        width: 90%;
     }
 
     .data {
@@ -197,7 +199,8 @@ form {
         text-align: center;
     }
     img {
-        width: 25rem;
+        width: 100%;
+        max-width: 25rem;
     }
 
     p {
@@ -236,15 +239,16 @@ form {
 
 @media only screen and (max-width: 550px){
     main {
-        width: 30rem;
+        width: 90%;
     }
 
     .portfolio-main {
-        height: 80%;
+        height: auto;
     }
 
     .img-port {
-        width: 20rem;
+        width: 100%;
+        max-width: 20rem;
     }
 
     .navbar a {
