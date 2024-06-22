@@ -8,7 +8,8 @@ body {
   color: #201e1e;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body, main {
@@ -20,7 +21,7 @@ header {
   height: 10rem;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .dark {
@@ -89,7 +90,8 @@ main .data, ul {
 
 main {
   margin: 10rem auto 0;
-  width: 65rem;
+  width: 90%;
+  max-width: 75rem;
 }
 main h1 {
   font-size: 6rem;
@@ -101,44 +103,46 @@ main .position {
 }
 main .myPhoto {
   border-radius: 50%;
-  width: 28rem;
+  width: 100%;
+  max-width: 28rem;
 }
 main .resume {
   font-size: 1.8rem;
   text-align: justify;
 }
-
-#portfolio {
+main #portfolio {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  height: 80rem;
+  height: auto;
   width: 100%;
+  margin-top: 10rem;
 }
-#portfolio .img-port:hover {
+main #portfolio .img-port {
+  width: 100%;
+  max-width: 55rem;
+  margin-bottom: 3rem;
+}
+main #portfolio .img-port:hover {
   transform: scale(1.1);
 }
-
-form {
+main #contact {
+  margin-top: 10rem;
+}
+main form {
   height: 100%;
   display: flex;
   justify-content: center;
 }
-form fieldset {
-  height: 45rem;
+main form fieldset {
+  height: 100%;
   margin: auto;
-  width: 45rem;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-form .submit {
-  cursor: pointer;
-  margin-top: 1rem;
-  padding: 0.6rem;
-  height: 4rem;
 }
 
 .dark-mode {
@@ -156,7 +160,7 @@ form .submit {
 
 @media only screen and (max-width: 675px) {
   main {
-    width: 40rem;
+    width: 90%;
   }
   .data {
     flex-direction: column;
@@ -170,7 +174,8 @@ form .submit {
     text-align: center;
   }
   img {
-    width: 25rem;
+    width: 100%;
+    max-width: 25rem;
   }
   p {
     font-size: 1.4rem;
@@ -204,13 +209,14 @@ form .submit {
 }
 @media only screen and (max-width: 550px) {
   main {
-    width: 30rem;
+    width: 90%;
   }
   .portfolio-main {
-    height: 80%;
+    height: auto;
   }
   .img-port {
-    width: 20rem;
+    width: 100%;
+    max-width: 20rem;
   }
   .navbar a {
     font-size: 1rem;
