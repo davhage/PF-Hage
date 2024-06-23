@@ -147,21 +147,28 @@ main {
     // Form
     #contact {
         margin-top: 10rem;
-    }
-    form {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        
+
+        form {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            
         fieldset {
-           height: 100%;
-           margin: auto;
-           width: 60%;
-           display: flex;
-           flex-direction: column;
-           justify-content: space-evenly;
-       }
-       
+            height: 100%;
+            margin: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            }
+           
+        .big {
+            padding: .7rem;
+        }
+        .exp {
+            width: 25%;
+        }
+        }
     }
 }
 

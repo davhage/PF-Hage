@@ -132,18 +132,24 @@ main #portfolio .img-port:hover {
 main #contact {
   margin-top: 10rem;
 }
-main form {
+main #contact form {
   height: 100%;
   display: flex;
   justify-content: center;
 }
-main form fieldset {
+main #contact form fieldset {
   height: 100%;
   margin: auto;
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+main #contact form .big {
+  padding: 0.7rem;
+}
+main #contact form .exp {
+  width: 25%;
 }
 
 .dark-mode {
